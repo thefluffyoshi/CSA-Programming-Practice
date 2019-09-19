@@ -1,4 +1,4 @@
-
+import java.util.Scanner;
 public class whatDay
 {
     public static void main (String[] args)
@@ -6,7 +6,16 @@ public class whatDay
         int minor = 17;
         int adult = 18;
 
+        Scanner keyboard = new Scanner (System.in);
+
         //asks for age and day of week
+        System.out.print("What is your age? ");
+        int age = keyboard.nextInt();
+
+        System.out.print("What day of the week is it? ");
+        String day = keyboard.next();
+
+        System.out.println (age + " " + day);
 
         //print out today is a school day and if they're a minor
         // or print out  weekday
