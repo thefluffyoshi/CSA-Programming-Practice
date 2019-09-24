@@ -1,28 +1,98 @@
 import java.util.Scanner;
 public class whatDay
 {
-    public static void main (String[] args)
+    public static void main(String[] args)
     {
         int minor = 17;
         int adult = 18;
 
-        Scanner keyboard = new Scanner (System.in);
+        Scanner keyboard = new Scanner(System.in);
 
-        //asks for age and day of week
+        //ask for age and day of week
         System.out.print("What is your age? ");
         int age = keyboard.nextInt();
 
         System.out.print("What day of the week is it? ");
-        String day = keyboard.next();
-
-        System.out.println (age + " " + day);
+        String whatDay = keyboard.next();
 
         //print out today is a school day and if they're a minor
         // or print out  weekday
+        if (age < minor)
+        {
+           if (whatDay.equals("Sunday") || whatDay.equals("sunday"))
+           {
+               System.out.println("Today is the weekend!");
+           }
+
+          if (whatDay.equals("Saturday") || whatDay.equals("saturday"))
+           {
+               System.out.println("Today is the weekend!");
+           }
+          if (whatDay.equals("Friday") || whatDay.equals("friday"))
+            {
+                System.out.println("Today is the weekend!");
+            }
+
+          if (whatDay.equals("Monday") || whatDay.equals("monday"))
+            {
+                System.out.println("Today is a school day.");
+            }
+          if (whatDay.equals("Tuesday") || whatDay.equals("tuesday"))
+            {
+                System.out.println("Today is a school day.");
+            }
+          if (whatDay.equals("Wednesday") || whatDay.equals("wednesday"))
+            {
+                System.out.println("Today is a school day.");
+            }
+          if (whatDay.equals("Thursday") || whatDay.equals("thursday"))
+            {
+                System.out.println("Today is a school day.");
+            }
+        } //end if minor
 
         //print out it is a weekday if adult
         // or print out work day
+        if (age > adult)
+        {
+            if (whatDay.equals("Monday") || whatDay.equals("monday"))
+            {
+                System.out.println("Today is a work day.");
+            }
+
+            if (whatDay.equals("Tuesday") || whatDay.equals("tuesday"))
+            {
+                System.out.println("Today is a work day.");
+            }
+
+            if (whatDay.equals("Wednesday") || whatDay.equals("wednesday"))
+            {
+                System.out.println("Today is a work day.");
+            }
+
+            if (whatDay.equals("Thursday") || whatDay.equals("thursday"))
+            {
+                System.out.println("Today is a work day.");
+            }
+
+            if (whatDay.equals("Friday") || whatDay.equals("friday"))
+            {
+                System.out.println("Today is the weekend!");
+            }
+
+            if (whatDay.equals("Saturday") || whatDay.equals("saturday"))
+            {
+                System.out.println("Today is the weekend!");
+            }
+
+            if (whatDay.equals("Sunday") || whatDay.equals("sunday"))
+            {
+                System.out.println("Today is the weekend!");
+            }
+
+        } //end if adult
 
         //if weekend celebrate
-    }
-}
+
+    }// end main
+} //end class whatDay
