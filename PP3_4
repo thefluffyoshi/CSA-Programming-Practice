@@ -1,0 +1,35 @@
+import java.util.Scanner;
+public class discount
+{
+    public static void main (String[] args)
+    {
+        double purchase;
+        String whatDay, discount;
+        discount = "The purchase is eligible. And you have a discount!";
+        Scanner keyboard = new Scanner(System.in);
+
+        System.out.print("What day is it today? ");
+        whatDay = keyboard.next();
+
+        System.out.print("What's the purchase amount? (in decimal) $");
+        purchase = keyboard.nextDouble();
+
+        //in progress
+        if (whatDay == "Tuesday" && purchase > 20.00)
+        {
+            System.out.println(discount);
+        }
+
+        else if (whatDay == "Wednesday" || purchase > 40.00)
+        {
+            //purchase side works!
+            System.out.println(discount);
+        }
+
+        //in progress
+        else if (whatDay == "Friday" && purchase < 1.00)
+        {
+            System.out.println(discount);
+        }
+    } //end main
+} //end class discount
