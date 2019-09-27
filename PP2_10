@@ -1,12 +1,14 @@
 import java.text.DecimalFormat;
 import java.lang.Math;
 import java.util.Scanner;
-public class triangle
+public class Triangle
 {
     public static void main (String[] args)
     {
         int a, b, c, s, discriminant;
         double area;
+        
+        //scanner
         Scanner keyboard = new Scanner(System.in);
         System.out.print("What is side a of the triangle? ");
         a = keyboard.nextInt();
@@ -17,14 +19,11 @@ public class triangle
         System.out.print("What is side c of the triangle? ");
         c = keyboard.nextInt();
         
-        //something wrong here?
-        s = (a + c + b)/3;
-        
         //three decimal places
         DecimalFormat decimal = new DecimalFormat ("0.###");
         
         //math
-        //something wrong here?
+        s = (a + c + b)/2;
         area = (double)(Math.sqrt(s* (s-a) * (s-b) * (s-c)));
         
         System.out.println("The area of the triangle is " + decimal.format(area));
