@@ -1,0 +1,33 @@
+import java.text.DecimalFormat;
+import java.lang.Math;
+import java.util.Scanner;
+public class triangle
+{
+    public static void main (String[] args)
+    {
+        int a, b, c, s, discriminant;
+        double area;
+        Scanner keyboard = new Scanner(System.in);
+        System.out.print("What is side a of the triangle? ");
+        a = keyboard.nextInt();
+        
+        System.out.print("What is side b of the triangle? ");
+        b = keyboard.nextInt();
+        
+        System.out.print("What is side c of the triangle? ");
+        c = keyboard.nextInt();
+        
+        //something wrong here?
+        s = (a + c + b)/3;
+        
+        //three decimal places
+        DecimalFormat decimal = new DecimalFormat ("0.###");
+        
+        //math
+        //something wrong here?
+        area = (double)(Math.sqrt(s* (s-a) * (s-b) * (s-c)));
+        
+        System.out.println("The area of the triangle is " + decimal.format(area));
+        
+    } //end main
+} //end class triangle
