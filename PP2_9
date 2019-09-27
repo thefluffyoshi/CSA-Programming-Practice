@@ -5,18 +5,21 @@ public class radius
 {
     public static void main (String[] args)
     {
-        //reads radius of sphere
+        //double
         final double VOLUME, SURFACE_AREA;
+        double pi = Math.PI;
+        
+        //scanner
         Scanner keyboard = new Scanner(System.in);
         System.out.print("What is the radius? ");
         int r = keyboard.nextInt();
-        double pi = Math.PI;
         
+        //math
         VOLUME = (double)(pi * Math.pow(r, 3) * 3/4);
         SURFACE_AREA = (double)(4 * pi * Math.pow(r, 2));
 
         // four decimal places
-        DecimalFormat decimal = new DecimalFormat("0.####");
+        DecimalFormat decimal = new DecimalFormat("0.###");
         
          //print volume and surface area
         System.out.println("The volume is " + decimal.format(VOLUME) + " The surface area is " + decimal.format(SURFACE_AREA));
