@@ -19,7 +19,7 @@ public class radius
         SURFACE_AREA = (double)(4 * pi * Math.pow(r, 2));
 
         // four decimal places
-        DecimalFormat decimal = new DecimalFormat("0.###");
+        DecimalFormat decimal = new DecimalFormat("0.####");
         
          //print volume and surface area
         System.out.println("The volume is " + decimal.format(VOLUME) + " The surface area is " + decimal.format(SURFACE_AREA));
