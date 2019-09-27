@@ -1,18 +1,24 @@
 import java.text.DecimalFormat;
 import java.lang.Math;
+import java.util.Scanner;
 public class radius
 {
     public static void main (String[] args)
     {
         //reads radius of sphere
-        int r;
-        final int VOLUME, SURFACE_AREA;
-
-        //print volume and surface area to
-
+        final double VOLUME, SURFACE_AREA;
+        Scanner keyboard = new Scanner(System.in);
+        System.out.print("What is the radius? ");
+        int r = keyboard.nextInt();
+        double pi = Math.PI;
+        
+        VOLUME = (double)(pi * Math.pow(r, 3) * 3/4);
+        SURFACE_AREA = (double)(4 * pi * Math.pow(r, 2));
 
         // four decimal places
-        DecimalFormat fmt = new DecimalFormat("0.####");
-
+        DecimalFormat decimal = new DecimalFormat("0.####");
+        
+         //print volume and surface area
+        System.out.println("The volume is " + decimal.format(VOLUME) + " The surface area is " + decimal.format(SURFACE_AREA));
     } //end main
 } //end class radius
