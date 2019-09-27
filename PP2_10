@@ -5,8 +5,8 @@ public class Triangle
 {
     public static void main (String[] args)
     {
-        int a, b, c, s, discriminant;
-        double area;
+        int a, b, c, discriminant;
+        double area, s;
         
         //scanner
         Scanner keyboard = new Scanner(System.in);
@@ -23,7 +23,7 @@ public class Triangle
         DecimalFormat decimal = new DecimalFormat ("0.###");
         
         //math
-        s = (a + c + b)/2;
+        s = (double)(a + c + b)/2.0;
         area = (double)(Math.sqrt(s* (s-a) * (s-b) * (s-c)));
         
         System.out.println("The area of the triangle is " + decimal.format(area));
