@@ -1,0 +1,19 @@
+import java.util.Scanner;
+public class IntValidate
+{
+    public static void main (String args[])
+    {
+        int num;
+
+        Scanner keyboard = new Scanner(System.in);
+        System.out.print("Enter an integer greater than 10: ");
+        num = keyboard.nextInt();
+
+        while (num < 10)
+        {
+            System.out.print("Not above 10. Please enter an integer above 10: ");
+            num = keyboard.nextInt();
+        }
+        System.out.print("Thank you. Processing...");
+    }//end main
+}//end class IntValidate
